@@ -61,4 +61,15 @@ def save_character(char : Character):
         f.write(save_string)
         print(f"{name} has been successfully saved.")
 
-    
+def load_characters():
+    characters = []
+    with open("saved_characters.txt", "r", encoding="utf8") as f:
+        for line in f.readlines():
+            attributes = line.split("/")
+            char = Character(attributes[0],
+                             attributes[1],
+                             attributes[2],
+                             attributes[3])
+            
+            characters.append(char)
+    return characters    
