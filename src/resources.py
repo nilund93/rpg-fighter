@@ -23,6 +23,9 @@ class Character:
     
     def get_name(self):
         return self.name
+    
+    def get_attributes(self):
+        return self.name, self.health, self.attack, self.armor
 
 class Goblin:
     
@@ -50,4 +53,12 @@ class Goblin:
     def get_name(self):
         return f"Goblin #{self.id}"
     
+
+def save_character(char : Character):
+    name, health, attack, armor = char.get_attributes()
+    save_string = f"{name}/{health}/{attack}/{armor}\n"
+    with open("saved_characters.txt", "a", encoding="utf8") as f:
+        f.write(save_string)
+        print(f"{name} has been successfully saved.")
+
     
