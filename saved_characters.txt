@@ -1,6 +1,2 @@
-Emy/8/5/2
-Nick/2/2/1
-Oliver/16/8/2
-Emil/12/2/2
-Felix/6/1/1
-Tzarina Katerin/22/1/2
+Tzarina Katerin/22/2
+Felix/30/2
